@@ -1,0 +1,37 @@
+.barra-vida {
+    -fx-padding: 8;
+    -fx-background-color: #e6e6f2;
+    -fx-background-radius: 8;
+}
+
+.barra-vida .nombre,
+.barra-vida .valor {
+    -fx-text-fill: navy;
+    -fx-font-weight: bold;
+}
+
+/* Altura fija: así la barra no desaparece si el contenedor se queda sin espacio */
+.barra-vida .progress-bar {
+    -fx-min-height: 20;
+    -fx-pref-height: 20;
+}
+
+.barra-vida .progress-bar > .track {
+    -fx-background-color: #45475a;
+    -fx-background-radius: 4;
+}
+
+.barra-vida .progress-bar > .bar {
+    -fx-background-color: #2ecc71;
+    -fx-background-insets: 0;
+    -fx-background-radius: 4;
+}
+
+/* Pseudoclase :critica, la activa BarraVida */
+.barra-vida:critica .progress-bar > .bar {
+    -fx-background-color: #e74c3c;
+}
+
+.barra-vida:critica .valor {
+    -fx-text-fill: #e74c3c;
+}
